@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="./app.css">
+</head>
+
+<body>
+  <div id="app" class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 col-sm-12">
+        <h1 class="text-center">welecome to Chat application</h1>
+        <br>
+        <div id="status"></div>
+        <div id="chat">
+          <input type="text" v-model="name" id="username" class="form-control" placeholder="Enter name...">
+          <br>
+          <div class="card">
+            <div id="mass" class="card-block" <div>
+              <div id="messages" class="drop">
+
+              </div>
+              <div class="dropdown-content" >
+                  <a>Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <textarea id="message" class="form-control" v-model="text" placeholder="Enter message..."></textarea>
+        <br>
+        <button id="send" class="btn" onclick="handleSubmitNewMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.3.2/socket.io.min.js"
+    integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs"
+    crossorigin="anonymous"></script>
+  <script src="./chat.js"></script>
+</body>
+
+</html>
